@@ -4,7 +4,7 @@ let fs = require("fs");
 let pUrl = process.argv[3];
 let nPost = process.argv[4];
 (async function () {
-  // browser create => icognito mode,fullscreen
+  // browser create => icognito mode,fullscreen 
   try { 
     let data = await fs.promises.readFile(cFile);
     let { url, pwd, user } = JSON.parse(data);
@@ -24,7 +24,7 @@ let nPost = process.argv[4];
     await tab.waitForSelector("input[name=username]");
     await tab.type("input[name=username]", user, { delay: 120 });
     await tab.type("input[type=password]", pwd, { delay: 120 });
-    //  _1xnd => group of post 
+    //  _1xnd => group of post  
     // _4-u2 _4-u8=> particular post
     //  inside ._1xnd
     // descendent => select 
